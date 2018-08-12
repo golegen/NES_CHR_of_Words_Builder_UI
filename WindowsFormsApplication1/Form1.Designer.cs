@@ -70,6 +70,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -77,7 +78,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -165,7 +165,6 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 21);
             this.toolStripMenuItem1.Text = "文件";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // 载入ToolStripMenuItem
             // 
@@ -188,7 +187,6 @@
             this.色彩集文档ToolStripMenuItem.Name = "色彩集文档ToolStripMenuItem";
             this.色彩集文档ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.色彩集文档ToolStripMenuItem.Text = "色彩集文档";
-            this.色彩集文档ToolStripMenuItem.Click += new System.EventHandler(this.文本文档ToolStripMenuItem_Click);
             // 
             // 文本文档ToolStripMenuItem
             // 
@@ -330,7 +328,6 @@
             this.输出检查报告ToolStripMenuItem.Name = "输出检查报告ToolStripMenuItem";
             this.输出检查报告ToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
             this.输出检查报告ToolStripMenuItem.Text = "输出检查报告(Report)";
-            this.输出检查报告ToolStripMenuItem.Click += new System.EventHandler(this.输出检查报告ToolStripMenuItem_Click);
             // 
             // 编制字模数据并汇报ToolStripMenuItem
             // 
@@ -425,7 +422,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.Size = new System.Drawing.Size(650, 366);
             this.tableLayoutPanel2.TabIndex = 1;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // label1
             // 
@@ -435,7 +431,6 @@
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 3;
             this.label1.Text = "文本：0 字";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // richTextBox1
             // 
@@ -445,8 +440,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(642, 116);
             this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.richTextBox1.Text = "请输入字模文字。Test...1234567890qwertyuiop[]\\";
             // 
             // label2
             // 
@@ -477,7 +471,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.Size = new System.Drawing.Size(645, 133);
             this.tableLayoutPanel3.TabIndex = 2;
-            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // tabControl1
             // 
@@ -492,6 +485,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.button9);
             this.tabPage1.Controls.Add(this.button8);
@@ -499,7 +493,6 @@
             this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.numericUpDown1);
-            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
@@ -513,6 +506,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "外观";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(201, 51);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(62, 21);
+            this.textBox2.TabIndex = 14;
             // 
             // label6
             // 
@@ -570,9 +571,10 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(234, 51);
+            this.numericUpDown1.Enabled = false;
+            this.numericUpDown1.Location = new System.Drawing.Point(264, 51);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            64,
+            144,
             0,
             0,
             0});
@@ -582,41 +584,35 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(35, 21);
+            this.numericUpDown1.Size = new System.Drawing.Size(17, 21);
             this.numericUpDown1.TabIndex = 7;
             this.numericUpDown1.Value = new decimal(new int[] {
             9,
             0,
             0,
             0});
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(207, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 12);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "字号";
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(154, 51);
+            this.button4.Location = new System.Drawing.Point(154, 50);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(39, 23);
             this.button4.TabIndex = 5;
             this.button4.Text = "S";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(109, 51);
+            this.button3.Location = new System.Drawing.Point(109, 50);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(39, 23);
             this.button3.TabIndex = 4;
             this.button3.Text = "U";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -627,6 +623,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "B";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -637,6 +634,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "I";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -649,6 +647,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "选择更多..."});
@@ -656,6 +655,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(219, 20);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "未曾选择字体。";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tabPage2
@@ -911,7 +911,6 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(185, 80);
             this.checkedListBox1.TabIndex = 6;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // comboBox4
             // 
@@ -940,9 +939,10 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "不压缩",
-            "垂直重叠压缩",
-            "水平重叠压缩"});
+            "2BPP，不压缩",
+            "2BPP，垂直重叠压缩",
+            "2BPP，水平重叠压缩",
+            "1BPP压缩"});
             this.comboBox3.Location = new System.Drawing.Point(81, 40);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 20);
@@ -963,7 +963,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "8x8",
             "8x16",
-            "12x16（整句）",
+            "12x16",
             "16x16",
             "16x32",
             "32x32",
@@ -972,7 +972,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 20);
             this.comboBox2.TabIndex = 1;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -1005,6 +1004,8 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(153, 366);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
@@ -1031,8 +1032,8 @@
             "下划线：",
             "阴影：",
             "字号：",
-            "偏移X:",
-            "偏移Y:",
+            "偏移X: 0",
+            "偏移Y: 0",
             "色彩集：",
             "色彩索引：",
             "主色：",
@@ -1071,10 +1072,6 @@
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // fontDialog1
-            // 
-            this.fontDialog1.Apply += new System.EventHandler(this.fontDialog1_Apply);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -1092,6 +1089,8 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "NES字模生成工具（NES CHR of Words Builder）";
+            this.Activated += new System.EventHandler(this.Form1_Activated);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1163,7 +1162,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
@@ -1216,6 +1214,7 @@
         private System.Windows.Forms.ToolStripMenuItem 粘贴字母azToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 粘贴大字字母AZToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 粘贴ASCII码ToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
